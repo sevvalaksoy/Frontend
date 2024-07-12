@@ -12,10 +12,10 @@ function App() {
         <Route path="/" exact>
           <HireMe />
         </Route>
-        <Route path="/projects" exact>
+        <Route path="/projects" >
           <Projects />
         </Route>
-        <Route path="/skills" exact>
+        <Route path="/skills" >
           <Skills />
         </Route>
       </Switch>
