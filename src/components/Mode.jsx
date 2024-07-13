@@ -1,23 +1,22 @@
 import { useDispatch, useSelector } from "react-redux";
-import useLocalStorage from "../hooks/useLocalStorage"
 import { lanChange, modeChange } from "../store/actions/actions";
 
 export default function Mode () {
 
     const dispatch = useDispatch();
-    const [value, setStorage] = useLocalStorage("mode", false); 
-    const [language, setLang] = useLocalStorage("lan", false); 
     const theme = useSelector(myStore=>myStore.mode);
     const lang = useSelector(myStore=>myStore.lan);
+    const content = useSelector(myStore=>myStore.info);
     
     const changeMode = () => {
-        setStorage(!value);
-        dispatch(modeChange());
+        dispatch(modeChange()); 
     };
+    
     const changeLang = () => {
-        setLang(!language);
         dispatch(lanChange());
     }
+
+    console.log( theme, lang, content);
 
     return (
         <div className="flex justify-end ">
@@ -36,7 +35,7 @@ export default function Mode () {
                         after:absolute sm:after:top-1 xs:after:top-[2px] sm:after:start-[1px] xs:after:start-0 after:bg-yellow after:border-black after:border after:rounded-full sm:after:h-4 sm:after:w-4 xs:after:h-3 xs:after:w-3 after:transition-all
                         dark:border-gray-600 peer-checked:bg-btn-purple"></div>
                         <span className={`font-Inter sm:text-base xs:text-xs font-bold ${!theme ? 'text-t-white' : 'text-gray'}`}> 
-                                { value ? "DARK MODE" : "LIGTH MODE"  }
+                                {lang ? (theme ? content.eng.mode.light : content.eng.mode.dark) : theme ? content.tr.mode.light : content.tr.mode.dark }
                         </span>
                     </label>
                 </div>
