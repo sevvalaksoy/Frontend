@@ -3,8 +3,19 @@ import { Route, Switch } from 'react-router-dom/cjs/react-router-dom.min'
 import HireMe from './pages/HireMe'
 import ProjectsPage from './pages/ProjectsPage'
 import SkillsPage from './pages/SkillsPage'
+import { useEffect } from 'react'
 
 function App() {
+
+  useEffect(()=>{
+    const md = localStorage.getItem("mode");
+    if ( md === 'false') {
+      document.querySelector('html').classList.add('dark');
+    } else {
+      document.querySelector('html').classList.remove('dark');
+    }
+  },[])
+  
 
   return (
     <>
