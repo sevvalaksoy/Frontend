@@ -6,30 +6,30 @@ export default function Hero () {
 
     return (
         <div className="flex justify-between h-2/5 gap-20 items-center mb-20">
-            <div className="flex flex-col w-7/12 h-6/12 gap-10">
+            <div className="flex flex-col lg:w-7/12 h-6/12 gap-10 md:w-9/12">
                 <div className="flex items-center gap-4">
-                    <hr className={`border-solid border-[1px] border-borderC w-24 text-purple ${!theme ? "text-t-lilac border-lilac": ""}`}/>
-                    <p className={`font-Inter font-medium font text-xl text-purple  ${!theme ? "text-t-lilac": ""}`}>Şevval Aksoy</p>
+                    <hr className={`border-solid border-[1px]  w-24  ${!theme ? "text-t-lilac border-lilac": "text-purple border-borderC"}`}/>
+                    <p className={`font-Inter font-medium font text-xl   ${!theme ? "text-t-lilac": "text-purple"}`}> Aksoy</p>
                 </div>
-                <h1 className={`font-Inter font-bold text-7xl text-black text-left ${!theme ? "text-h1": ""}`}>Creative thinker Minimalism lover</h1>
-                <p className={`font-normal font-Inter text-lg text-left text-gray2 ${!theme ? "text-white": ""}`}>Hi, I’m Şevval. I’m a full-stack developer. If you are looking for a Developer who to craft solid and scalable frontend products with great user experiences. Let’s shake hands with me.</p>
-                <div className="flex gap-6 items-start">
-                    {theme?(<button className="border-solid border-[1px] bg-borderC rounded-md text-lg font-Inter font-medium text-white cursor-pointer py-3 px-8">Hire me</button>):
-                    (<button className="border-solid border-[1px] bg-btn-lilac rounded-md text-lg font-Inter font-medium text-r-black cursor-pointer py-3 px-8">Hire me</button>)}
+                <h1 className={`font-Inter font-bold lg:text-7xl text-left md:text-3xl ${!theme ? "text-h1": "text-black"}`}>Creative thinker Minimalism lover</h1>
+                <p className={`font-normal font-Inter lg:text-lg text-left md:text-sm ${!theme ? "text-white": "text-gray2"}`}>Hi, I’m Şevval. I’m a full-stack developer. If you are looking for a Developer who to craft solid and scalable frontend products with great user experiences. Let’s shake hands with me.</p>
+                <div className="flex lg:gap-6 items-start md:gap-4">
+                    {theme?(<button className="border-solid border-[1px] bg-borderC rounded-md lg:text-lg font-Inter lg:font-medium text-white cursor-pointer lg:py-3 lg:px-8 md:text-base md:py-[9px] md:px-2">Hire me</button>):
+                    (<button className="border-solid border-[1px] bg-btn-lilac rounded-md lg:text-lg font-Inter lg:font-medium text-r-black cursor-pointer lg:py-3 lg:px-8 md:text-base md:py-[9px] md:px-2">Hire me</button>)}
 
-                    {theme?(<button className={`border-solid border-[1px] border-borderC flex items-center gap-2 rounded-md text-lg font-Inter font-medium text-purple2 cursor-pointer py-3 px-4 ${!theme ? " border-btn-lilac bg-btn-bcg ": ""}`}>
+                    {theme?(<button className={`border-solid border-[1px] border-borderC flex items-center lg:gap-2 rounded-md lg:text-lg font-Inter font-medium text-purple2 cursor-pointer lg:py-3 lg:px-4 md:py-2 md:px-2 md:gap-1 ${!theme ? " border-btn-lilac bg-btn-bcg ": ""}`}>
                     <img src="../../public/github.svg"/> Github</button>):
-                    (<button className="border-solid border-[1px] border-btn-lilac bg-btn-bcg flex items-center gap-2 rounded-md text-lg font-Inter font-medium text-btn-lilac cursor-pointer py-3 px-4">
+                    (<button className="border-solid border-[1px] border-btn-lilac bg-btn-bcg flex items-center lg:gap-2 rounded-md lg:text-lg font-Inter font-medium text-btn-lilac cursor-pointer lg:py-3 lg:px-4 md:py-2 md:px-2 md:gap-1">
                     <img src="../../public/githubD.svg"/> Github</button>)}
                     
-                    {theme?(<button className={`border-solid border-[1px] border-borderC flex items-center gap-2 rounded-md text-lg font-Inter font-medium text-purple2 cursor-pointer py-3 px-4 ${!theme ? " border-btn-lilac bg-btn-bcg ": ""}`}> 
+                    {theme?(<button className={`border-solid border-[1px] border-borderC flex items-center lg:gap-2 rounded-md lg:text-lg font-Inter font-medium text-purple2 cursor-pointer lg:py-3 lg:px-4 md:py-2 md:px-2 md:gap-1 ${!theme ? " border-btn-lilac bg-btn-bcg ": ""}`}> 
                     <img src="../../public/linkedin.svg"/>Linkedin</button>):
-                    (<button className={`border-solid border-[1px] border-btn-lilac bg-btn-bcg flex items-center gap-2 rounded-md text-lg font-Inter font-medium text-btn-lilac cursor-pointer py-3 px-4 ${!theme ? " border-btn-lilac bg-btn-bcg ": ""}`}> 
+                    (<button className={`border-solid border-[1px] border-btn-lilac bg-btn-bcg flex items-center lg:gap-2 rounded-md lg:text-lg font-Inter font-medium text-btn-lilac cursor-pointer lg:py-3 lg:px-4 md:py-2 md:px-2 md:gap-1 ${!theme ? " border-btn-lilac bg-btn-bcg ": ""}`}> 
                     <img src="../../public/linkedinD.svg"/>Linkedin</button>)}
                 </div>
             </div>
-            <div className="w-5/12 h-6/12"> 
-                <img className="object-cover rounded-2xl" src="../../public/pp.jpg"/>
+            <div className="lg:w-5/12 lg:h-6/12 md:w-6/12 md:h-4/6"> 
+                <img className="object-cover rounded-2xl" src={"/pp.jpg"}/>
             </div>
         </div>
     )

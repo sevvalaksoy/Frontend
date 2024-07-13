@@ -13,7 +13,7 @@ export default function HireMe () {
 
     return (
         <div>
-            <div className={`flex flex-col gap-20 py-12 px-20 ${!theme ? 'bg-d-body' : ''}`} > 
+            <div className={`flex flex-col lg:gap-20 py-12 lg:px-20 md:px-10 md:gap-12 ${!theme ? 'bg-d-body' : 'bg-white'}`} > 
                 <Mode/>
                 <Header/>
                 <Hero/>
