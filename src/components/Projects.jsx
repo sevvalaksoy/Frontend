@@ -8,7 +8,7 @@ export default function Projects () {
             <h2 className={`font-Inter font-semibold md:text-5xl ${!theme?"text-h1":"text-black"}`}>Projects</h2> 
             <div className="w-full flex justify-between">
                 <div className="flex flex-col items-start w-[30%] gap-4 ">
-                    <img src="../../public/proje1.png" className="w-full h-80" />
+                    <img src={"/proje1.png"} className="w-full h-80" />
                     <h3 className={`font-Inter text-3xl font-medium text-left ${!theme? "text-pr":"text-purple"}`}>Movie List</h3> 
                     <p className={`font-Inter font-normal md:text-sm text-left ${!theme?"text-white":"text-gray2"}`}>A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.</p>
                     <div className="flex lg:gap-4 md:gap-2">
@@ -22,7 +22,7 @@ export default function Projects () {
                     </div>
                 </div>
                 <div className="flex flex-col items-start w-[30%] gap-4">
-                    <img src="../../public/proje2.png" className="w-full h-80"/>
+                    <img src={"/proje2.png"} className="w-full h-80"/>
                     <h3 className={`font-Inter text-3xl font-medium text-left ${!theme? "text-pr":"text-purple"}`}>IMDB Movies</h3>
                     <p className={`font-Inter font-normal md:text-sm text-left ${!theme?"text-white":"text-gray2"}`}>A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.</p>
                     <div className="flex lg:gap-4 md:gap-2">
@@ -36,7 +36,7 @@ export default function Projects () {
                     </div>
                 </div>
                 <div className="flex flex-col items-start w-[30%] gap-4">
-                    <img src="../../public/proje3.png" className="w-full h-80"/>
+                    <img src={"/proje3.png"} className="w-full h-80"/>
                     <h3 className={`font-Inter text-3xl font-medium text-left ${!theme? "text-pr":"text-purple"}`}>Grid Game</h3>
                     <p className={`font-Inter font-normal md:text-sm text-left ${!theme?"text-white":"text-gray2 "}`}>A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.</p>
                     <div className="flex lg:gap-4 md:gap-2">
