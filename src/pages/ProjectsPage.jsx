@@ -6,7 +6,7 @@ import FullProjects from "../components/FullProjects";
 
 export default function ProjectsPage () {
 
-    const theme = useSelector(myStore=>myStore.mode);
+    const theme = useSelector(myStore=>myStore.mode); 
     
     return (
         <div>

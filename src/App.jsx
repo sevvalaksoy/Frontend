@@ -1,8 +1,8 @@
 import './App.css'
 import { Route, Switch } from 'react-router-dom/cjs/react-router-dom.min'
 import HireMe from './pages/HireMe'
-import Projects from './pages/ProjectsPage'
-import Skills from './pages/SkillsPage'
+import ProjectsPage from './pages/ProjectsPage'
+import SkillsPage from './pages/SkillsPage'
 
 function App() {
 
@@ -13,10 +13,10 @@ function App() {
           <HireMe />
         </Route>
         <Route path="/projects" >
-          <Projects />
+          <ProjectsPage />
         </Route>
         <Route path="/skills" >
-          <Skills />
+          <SkillsPage />
         </Route>
       </Switch>
     </>

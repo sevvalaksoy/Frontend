@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 
 export default function Project (props) {
     const {link1, link2, name, description, img} = props;
+    
     const theme = useSelector(myStore=>myStore.mode);
 
     return (

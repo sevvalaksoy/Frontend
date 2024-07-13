@@ -7,6 +7,13 @@ export const projects = [
         link2: "https://s7-pizza-challenge.vercel.app/",
     },
     {
+        name:"Gratitude List",
+        img:"/gratitude.png",
+        description:"A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+        link1: "https://github.com/sevvalaksoy/s10g5",
+        link2: "https://s10g5.vercel.app/",
+    },
+    {
         name: "IMDB Movies",
         img: "/proje2.png",
         description:"A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
@@ -56,11 +63,11 @@ export const projects = [
         link2: "https://s10g1.vercel.app/",
     },
     {
-        name:"WiContacts",
-        img:"/wicontacts.png",
+        name:"Product Chart",
+        img:"/products.png",
         description:"A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
-        link1: "https://github.com/sevvalaksoy/s10g4",
-        link2: "https://s10g4.vercel.app/",
+        link1: "https://github.com/sevvalaksoy/s11g2",
+        link2: "https://s11g2.vercel.app/",
     },
     {
         name:"Friends",
@@ -70,18 +77,11 @@ export const projects = [
         link2: "https://s11g1.vercel.app/login",
     },
     {
-        name:"Gratitude List",
-        img:"/gratitude.png",
+        name:"WiContacts",
+        img:"/wicontacts.png",
         description:"A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
-        link1: "https://github.com/sevvalaksoy/s10g5",
-        link2: "https://s9g2.vercel.app/",
-    },
-    {
-        name:"Product Chart",
-        img:"/products.png",
-        description:"A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
-        link1: "https://github.com/sevvalaksoy/s11g2",
-        link2: "https://s11g2.vercel.app/",
+        link1: "https://github.com/sevvalaksoy/s10g4",
+        link2: "https://s10g4.vercel.app/",
     },
     {
         name:"WiStore",
@@ -89,6 +89,13 @@ export const projects = [
         description:"A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
         link1: "https://github.com/sevvalaksoy/s9g3",
         link2: "https://s9g3.vercel.app/",
+    },
+    {
+        name:"CRUDs",
+        img:"/CRUD.png",
+        description:"A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+        link1: "https://github.com/sevvalaksoy/s11g3",
+        link2: "https://s11g3.vercel.app/movies",
     },
     
 ]
