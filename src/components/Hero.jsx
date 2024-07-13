@@ -17,14 +17,14 @@ export default function Hero () {
                     {theme?(<button className="border-solid border-[1px] bg-borderC rounded-md lg:text-lg font-Inter lg:font-medium text-white cursor-pointer lg:py-3 lg:px-8 md:text-base md:py-[9px] md:px-2 sm:text-sm sm:px-2 sm:py-2">Hire me</button>):
                     (<button className="border-solid border-[1px] bg-btn-lilac rounded-md lg:text-lg font-Inter lg:font-medium text-r-black cursor-pointer lg:py-3 lg:px-8 md:text-base md:py-[9px] md:px-2 sm:text-sm sm:px-2 sm:py-2">Hire me</button>)}
 
-                    {theme?(<button className={`border-solid border-[1px] border-borderC flex items-center lg:gap-2 rounded-md lg:text-lg font-Inter font-medium text-purple2 cursor-pointer lg:py-3 lg:px-4 md:py-2 md:px-2 md:gap-1 sm:text-sm sm:px-2 sm:py-1 ${!theme ? " border-btn-lilac bg-btn-bcg ": ""}`}>
+                    {theme?(<button className={`border-solid border-[1px] border-borderC flex items-center lg:gap-2 rounded-md lg:text-lg font-Inter font-medium text-purple2 cursor-pointer lg:py-3 lg:px-4 md:py-2 md:px-2 md:gap-1 sm:text-sm sm:px-2 sm:py-1 sm:gap-1 ${!theme ? " border-btn-lilac bg-btn-bcg ": ""}`}>
                     <img src={"/github.svg"}/> Github</button>):
-                    (<button className="border-solid border-[1px] border-btn-lilac bg-btn-bcg flex items-center lg:gap-2 rounded-md lg:text-lg font-Inter font-medium text-btn-lilac cursor-pointer lg:py-3 lg:px-4 md:py-2 md:px-2 md:gap-1 sm:text-sm sm:px-2 sm:py-1">
+                    (<button className="border-solid border-[1px] border-btn-lilac bg-btn-bcg flex items-center lg:gap-2 rounded-md lg:text-lg font-Inter font-medium text-btn-lilac cursor-pointer lg:py-3 lg:px-4 md:py-2 md:px-2 md:gap-1 sm:text-sm sm:px-2 sm:py-1 sm:gap-1 ">
                     <img src={"/githubD.svg"}/> Github</button>)}
                     
-                    {theme?(<button className={`border-solid border-[1px] border-borderC flex items-center lg:gap-2 rounded-md lg:text-lg font-Inter font-medium text-purple2 cursor-pointer lg:py-3 lg:px-4 md:py-2 md:px-2 md:gap-1 sm:text-sm sm:px-2 sm:py-1 ${!theme ? " border-btn-lilac bg-btn-bcg ": ""}`}> 
+                    {theme?(<button className={`border-solid border-[1px] border-borderC flex items-center lg:gap-2 rounded-md lg:text-lg font-Inter font-medium text-purple2 cursor-pointer lg:py-3 lg:px-4 md:py-2 md:px-2 md:gap-1 sm:text-sm sm:px-2 sm:py-1 sm:gap-1  ${!theme ? " border-btn-lilac bg-btn-bcg ": ""}`}> 
                     <img src={"/linkedin.svg"}/>Linkedin</button>):
-                    (<button className={`border-solid border-[1px] border-btn-lilac bg-btn-bcg flex items-center lg:gap-2 rounded-md lg:text-lg font-Inter font-medium text-btn-lilac cursor-pointer lg:py-3 lg:px-4 md:py-2 md:px-2 md:gap-1 sm:text-sm sm:px-2 sm:py-1 ${!theme ? " border-btn-lilac bg-btn-bcg ": ""}`}> 
+                    (<button className={`border-solid border-[1px] border-btn-lilac bg-btn-bcg flex items-center lg:gap-2 rounded-md lg:text-lg font-Inter font-medium text-btn-lilac cursor-pointer lg:py-3 lg:px-4 md:py-2 md:px-2 md:gap-1 sm:text-sm sm:px-2 sm:py-1 sm:gap-1  ${!theme ? " border-btn-lilac bg-btn-bcg ": ""}`}> 
                     <img src={"/linkedinD.svg"}/>Linkedin</button>)}
                 </div>
             </div>
