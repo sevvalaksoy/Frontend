@@ -35,7 +35,7 @@ export default function Mode () {
                         dark:bg-black1 peer-checked:after:translate-x-7 rtl:peer-checked:after:-translate-x-full peer-checked:after:border-pink after:content-[''] 
                         after:absolute after:top-1 after:start-[1px] after:bg-yellow after:border-black after:border after:rounded-full after:h-4 after:w-4 after:transition-all
                         dark:border-gray-600 peer-checked:bg-btn-purple"></div>
-                        <span className={`font-Inter md:text-base font-bold  ${!theme ? 'text-t-white' : 'text-gray'}`}> 
+                        <span className={`font-Inter md:text-base font-bold ${!theme ? 'text-t-white' : 'text-gray'}`}> 
                                 { value ? "DARK MODE" : "LIGTH MODE"  }
                         </span>
                     </label>
