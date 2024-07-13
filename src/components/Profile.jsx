@@ -14,7 +14,7 @@ export default function Profile () {
                             <h4 className={`font-Inter font-semibold lg:text-lg md:text-sm sm:text-xs text-left ${!theme?"text-white":"text-black"}`}>Doğum Tarihi</h4>
                             <h4 className={`font-Inter font-semibold lg:text-lg md:text-sm sm:text-xs text-left ${!theme?"text-white":"text-black"}`}>İkamet Şehri</h4>
                             <h4 className={`font-Inter font-semibold lg:text-lg md:text-sm sm:text-xs text-left ${!theme?"text-white":"text-black"}`}>Eğitim Durumu</h4>
-                            <h4 className={`font-Inter font-semibold lg:text-lg md:text-sm sm:text-xs text-left md:pt-5 ${!theme?"text-white":"text-black"}`}>Tercih Ettiği Rol</h4> 
+                            <h4 className={`font-Inter font-semibold lg:text-lg md:text-sm sm:text-xs text-left md:pt-7 sm:pt-4 ${!theme?"text-white":"text-black"}`}>Tercih Ettiği Rol</h4> 
                         </div>
                         <div className="flex flex-col md:gap-6 sm:gap-10">
                             <p className={`font-Inter font-normal lg:text-lg md:text-sm sm:text-xs text-left ${!theme?"text-white":"text-black"}`}>05.02.1998</p>
