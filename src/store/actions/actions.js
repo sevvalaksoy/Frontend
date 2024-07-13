@@ -11,5 +11,5 @@ export const lanChange = () => {
 }
 
 export const changeData = () => {
-    return { type: CHANGE_LAN }
+    return { type: CHANGE_DATA }
 }

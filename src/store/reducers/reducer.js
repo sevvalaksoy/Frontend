@@ -1,5 +1,5 @@
 import {data} from "../../data";
-import {CHANGE_LAN, CHANGE_MODE, CHANGE_DATA} from "../actions/actions"
+import {CHANGE_LAN, CHANGE_MODE} from "../actions/actions"
 
 function localStorageStateYaz(key, data) {
     localStorage.setItem(key, JSON.stringify(data));
@@ -18,17 +18,17 @@ function localStorageStateOku(key, defaultValue) {
 const initialState = {
     info: data,
     mode: localStorageStateOku("mode", true),
-    lan: localStorageStateOku("lan", true),
+    lan: localStorageStateOku("lan", "eng"),
 } 
-
+ 
 export const reducer = (state = initialState, action) => {
 
-    let nwl, newMode, newinfo;
+    let nwl, newMode;
 
     switch (action.type) {
 
         case CHANGE_LAN:
-            nwl = !state.lan;
+            nwl = state.lan=== "eng"? "tr" :"eng"
             localStorageStateYaz("lan", nwl)
             return {
                 ...state,
@@ -41,12 +41,6 @@ export const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 mode: newMode
-            };
-
-        case CHANGE_DATA:
-            newinfo = {...state, info: state.lan ? state.info.eng : state.info.tr }
-            return {
-                newinfo
             };
 
     default:
