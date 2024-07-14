@@ -1,4 +1,4 @@
-export const projects = [
+export let projes = [
     {
         name:"Pizza",
         img:"/pizza.png",
