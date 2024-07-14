@@ -1,7 +1,15 @@
 import Project from "./Project";
-import {projes} from "../projects"
+import { useProjects } from "../services/tanStack";
 
 export default function FullProjects () {
+
+    const {isPending, error, data} = useProjects();
+
+    if (isPending) return 'Loading...';
+
+    if (error) return 'Hata: ' + error.message; 
+
+    const { data: projects } = data; 
 
     return (
         <div className="flex flex-col items-start w-full gap-10 py-12">
@@ -19,7 +27,7 @@ export default function FullProjects () {
                         <a className="font-Inter font-medium cursor-pointer underline md:text-base xs:text-xs dark:text-btn-t text-purple2" href="https://www.amazon.com.tr/b?node=60457475031">View Site</a>
                     </div>
                 </div>
-                {projes.map((proje, key)=> {
+                {projects.map((proje, key)=> {
                     return <Project key={key} link1={proje.link1} name={proje.name} link2={proje.link2} img={proje.img} description={proje.description}/>
                 })}
             </div>

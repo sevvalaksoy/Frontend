@@ -23,9 +23,9 @@ function App() {
       document.querySelector('html').classList.remove('dark');
     } 
   },[])
-
+  
   return (
-    <>
+    
       <QueryClientProvider client={queryClient}>
         <Switch>
           <Route path="/" exact>
@@ -43,7 +43,7 @@ function App() {
         </Switch>
         <ToastContainer/>
       </QueryClientProvider>
-    </>
+  
   )
 }
 

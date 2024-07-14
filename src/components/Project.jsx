@@ -5,7 +5,7 @@ export default function Project (props) {
 
     return (
         <div className="flex flex-col items-start sm:w-[30%] gap-4 pb-20">
-            <img src={img} className="md:w-full md:h-80 sm:h-40"/>
+            <img src={img} loading="lazy" className="md:w-full md:h-80 sm:h-40"/>
             <h3 className="font-Inter md:text-3xl font-medium text-left sm:text-lg xs:text-base dark:text-pr text-purple">{name}</h3>
             <p className="font-Inter font-normal md:text-sm text-left xs:text-xs dark:text-white text-gray2">{description}</p>
             <div className="flex lg:gap-4 md:gap-2 xs:gap-1">
