@@ -36,7 +36,7 @@ export default function Mode () {
                         after:absolute sm:after:top-1 xs:after:top-[2px] sm:after:start-[1px] xs:after:start-0 after:bg-yellow after:border-black after:border after:rounded-full sm:after:h-4 sm:after:w-4 xs:after:h-3 xs:after:w-3 after:transition-all
                         dark:border-gray-600 peer-checked:bg-btn-purple"></div>
                         <span className="font-Inter sm:text-base xs:text-xs font-bold dark:text-t-white text-gray"> 
-                                
+                            {lang==="eng" ? (theme ? "DARK MODE" : "LIGHT MODE") : theme ? "KARANLIK MOD" : "AYDINLIK MOD" }
                         </span>
                     </label>
                 </div>
@@ -54,4 +54,3 @@ export default function Mode () {
         </div>
     )
 }
-//{lang==="eng" ? (theme ? content.eng.mode.light : content.eng.mode.dark) : theme ? content.tr.mode.light : content.tr.mode.dark }
