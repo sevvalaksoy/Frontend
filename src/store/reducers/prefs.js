@@ -1,5 +1,5 @@
 import {data} from "../../data";
-import {CHANGE_LAN, CHANGE_MODE} from "../actions/actions"
+import {CHANGE_LAN, CHANGE_MODE, ADD_CONTACT} from "../actions/actions"
 
 function localStorageStateYaz(key, data) {
     localStorage.setItem(key, JSON.stringify(data));
@@ -10,20 +10,21 @@ function localStorageStateOku(key, defaultValue) {
     if (localVal === null) {
       localStorage.setItem(key, JSON.stringify(defaultValue));
       return defaultValue;
-    } else {
+    } else { 
       return localVal;
     }
 }
 
 const initialState = {
     info: data,
+    contact: {},
     mode: localStorageStateOku("mode", true),
     lan: localStorageStateOku("lan", "eng"),
 } 
  
-export const reducer = (state = initialState, action) => {
+export const preferences = (state = initialState, action) => {
 
-    let nwl, newMode;
+    let nwl, newMode, newContact;
 
     switch (action.type) {
 
@@ -43,8 +44,14 @@ export const reducer = (state = initialState, action) => {
                 mode: newMode
             };
 
+        case ADD_CONTACT:
+            newContact = {...state.contact, ...action.payload}
+            return {
+                ...state,
+                contact: newContact
+            };
+
     default:
         return state;
     }
   };
-

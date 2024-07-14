@@ -1,4 +1,5 @@
 import './App.css'
+import "react-toastify/dist/ReactToastify.css";
 import { Route, Switch } from 'react-router-dom/cjs/react-router-dom.min'
 import HireMe from './pages/HireMe'
 import ProjectsPage from './pages/ProjectsPage'
@@ -6,6 +7,7 @@ import SkillsPage from './pages/SkillsPage'
 import { useEffect } from 'react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import Contact from './pages/Contact'
+import { ToastContainer } from 'react-toastify'
 
 
 export const queryClient = new QueryClient();
@@ -19,7 +21,7 @@ function App() {
       document.querySelector('html').classList.add('dark');
     } else {
       document.querySelector('html').classList.remove('dark');
-    }
+    } 
   },[])
 
   return (
@@ -39,6 +41,7 @@ function App() {
             <Contact />
           </Route>
         </Switch>
+        <ToastContainer/>
       </QueryClientProvider>
     </>
   )

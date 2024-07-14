@@ -1,7 +1,14 @@
+
 import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { toast } from "react-toastify";
+import { addContact } from "../store/actions/actions";
 
 export default function ContactForm () {
-    
+    let history = useHistory();
+    let dispatch = useDispatch();
+
     const {
         register,
         handleSubmit,
@@ -15,11 +22,16 @@ export default function ContactForm () {
             location: "",
             email: "",
         },
-        mode: 'onChange' });
+        mode: 'onChange' }); 
 
         function myHandleSubmit(formData ) {
             console.log(formData);
             reset();
+            dispatch(addContact(formData));
+            toast.success("Beni Tercih ettiğin için Teşekkürler!", {
+                position: "top-center"
+            })
+            history.push("/");
           }
 
     return (
