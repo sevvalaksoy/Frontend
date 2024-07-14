@@ -12,7 +12,6 @@ export default function ProjectsPage () {
                 <Mode/>
                 <Header/> 
                 <FullProjects/>
-                <button onClick={()=>history.push("/")} className="border-solid border-[1px] w-1/5 border-borderC rounded-md md:text-lg font-Inter font-medium text-purple2 cursor-pointer md:py-3 md:px-8 xs:py-1 sm:px-5 xs:px-2 xs:text-base bg-white">Add Project</button>
             </div>
             <Footer/> 
         </div>
