@@ -38,7 +38,7 @@ const deleteUser = (id) => {
   );
 };
 
-export const deleteContact = () => {
+export const useDeleteContact = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
@@ -51,16 +51,16 @@ export const deleteContact = () => {
 
 // TO ADD A NEW USER
 const addUser = (proje) => {
-  return axios.post("https://66939610c6be000fa07c73fb.mockapi.io/api/f/projects", proje);
+  return axios.post("https://66942c42c6be000fa07e4e77.mockapi.io/f2/contact", proje);
 };
 
-export const addContact = () => {
+export const useAddContact = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
     mutationFn: addUser,
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['projects'] });
+      queryClient.invalidateQueries({ queryKey: ['contact'] });
     },
   });
 };

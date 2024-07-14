@@ -4,11 +4,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { toast } from "react-toastify";
 import { addContact } from "../store/actions/actions";
+import { useAddContact } from "../services/tanStack";
 
 export default function ContactForm () {
     let history = useHistory();
     let dispatch = useDispatch();
     const person = useSelector(myStore=>myStore.contact);
+
+    const mutation = useAddContact();
 
     const {
         register,
@@ -26,6 +29,7 @@ export default function ContactForm () {
         mode: 'onChange' }); 
 
         function myHandleSubmit(formData ) {
+            if(!isValid)return;
             console.log(formData);
             if(person.name===formData.name) {
                 toast.error("Daha önce kayıt yapılmış!", {
@@ -34,6 +38,7 @@ export default function ContactForm () {
             } else {
                 reset();
                 dispatch(addContact(formData));
+                mutation.mutate(formData);
                 toast.success("Beni Tercih ettiğin için Teşekkürler!", {
                     position: "top-center"
                 })

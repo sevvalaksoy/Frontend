@@ -1,7 +1,7 @@
 import Project from "./Project";
 import { useProjects } from "../services/tanStack";
 
-export default function FullProjects () {
+export default function FullProjects () { 
 
     const {isPending, error, data} = useProjects();
 
