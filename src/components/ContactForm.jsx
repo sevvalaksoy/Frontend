@@ -1,6 +1,6 @@
 
 import { useForm } from "react-hook-form";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { toast } from "react-toastify";
 import { addContact } from "../store/actions/actions";
@@ -8,6 +8,7 @@ import { addContact } from "../store/actions/actions";
 export default function ContactForm () {
     let history = useHistory();
     let dispatch = useDispatch();
+    const person = useSelector(myStore=>myStore.contact);
 
     const {
         register,
@@ -26,12 +27,18 @@ export default function ContactForm () {
 
         function myHandleSubmit(formData ) {
             console.log(formData);
-            reset();
-            dispatch(addContact(formData));
-            toast.success("Beni Tercih ettiğin için Teşekkürler!", {
-                position: "top-center"
-            })
-            history.push("/");
+            if(person.name===formData.name) {
+                toast.error("Daha önce kayıt yapılmış!", {
+                    position: "top-center"
+                })
+            } else {
+                reset();
+                dispatch(addContact(formData));
+                toast.success("Beni Tercih ettiğin için Teşekkürler!", {
+                    position: "top-center"
+                })
+                history.push("/");
+            }
           }
 
     return (

@@ -8,6 +8,7 @@ import { useEffect } from 'react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import Contact from './pages/Contact'
 import { ToastContainer } from 'react-toastify'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 
 export const queryClient = new QueryClient();
@@ -21,8 +22,9 @@ function App() {
       document.querySelector('html').classList.add('dark');
     } else {
       document.querySelector('html').classList.remove('dark');
-    } 
+    }
   },[])
+
   
   return (
     
@@ -42,6 +44,7 @@ function App() {
           </Route>
         </Switch>
         <ToastContainer/>
+        <ReactQueryDevtools/>
       </QueryClientProvider>
   
   )
