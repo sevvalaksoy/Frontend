@@ -14,27 +14,27 @@ export const useProjects = () => {
 };
 
 // TO GET A SPECIFIC PROJECT
-const getProject = async (user) => {
+const getProject = async (id) => {
   let data;
   await axios
-    .get(`https://65b36193770d43aba479a2f2.mockapi.io/users/${user}`)
+    .get(`https://66939610c6be000fa07c73fb.mockapi.io/api/f/projects${id}`)
     .then((response) => {
       data = response.data;
     });
   return data;
 };
 
-export const useProject = (user) => {
+export const useProject = (id) => {
   return useQuery({
-    queryKey: ['contacts', user],
-    queryFn: () => getProject(user),
+    queryKey: ['projects', id],
+    queryFn: () => getProject(id),
   });
 };
 
 // TO DELETE A USER
-const deleteUser = (user) => {
+const deleteUser = (id) => {
   return axios.delete(
-    `https://65b36193770d43aba479a2f2.mockapi.io/users/${user}`
+    `https://66939610c6be000fa07c73fb.mockapi.io/api/f/projects${id}`
   );
 };
 
@@ -44,14 +44,14 @@ export const deleteContact = () => {
   return useMutation({
     mutationFn: deleteUser,
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['contacts'] });
+      queryClient.invalidateQueries({ queryKey: ['projects'] });
     },
   });
 };
 
 // TO ADD A NEW USER
-const addUser = (user) => {
-  return axios.post('https://65b36193770d43aba479a2f2.mockapi.io/users', user);
+const addUser = (proje) => {
+  return axios.post("https://66939610c6be000fa07c73fb.mockapi.io/api/f/projects", proje);
 };
 
 export const addContact = () => {
@@ -60,7 +60,7 @@ export const addContact = () => {
   return useMutation({
     mutationFn: addUser,
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['contacts'] });
+      queryClient.invalidateQueries({ queryKey: ['projects'] });
     },
   });
 };
