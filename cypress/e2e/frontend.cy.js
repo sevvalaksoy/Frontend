@@ -69,3 +69,15 @@ describe('Language Check', () => {
     cy.contains("Yaratıcı düşünen, Minimalizm aşığı").should("be.visible");
   });
 }); 
+
+describe("Mode Check", () => {
+
+  it("Check if dark mode works", () => {
+    //arrange
+    cy.get('[data-cy="dark-button"]').as("ModeBtn")
+    //act
+    cy.get("@ModeBtn").click();
+    //assert
+    cy.get('html').should('have.class', "dark")
+  });
+})

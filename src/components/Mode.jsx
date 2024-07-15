@@ -25,6 +25,7 @@ export default function Mode () {
                 <div className="flex items-center">
                     <label className="relative inline-flex items-center cursor-pointer sm:gap-2 xs:gap-1">
                         <input
+                            data-cy="dark-button"
                             type="checkbox"
                             className="sr-only peer"
                             data-testid="darkMode-toggle"
