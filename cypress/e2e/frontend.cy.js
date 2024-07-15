@@ -76,7 +76,7 @@ describe("Mode Check", () => {
     //arrange
     cy.get('[data-cy="dark-button"]').as("ModeBtn")
     //act
-    cy.get("@ModeBtn").check();
+    cy.get("@ModeBtn").click();
     //assert
     cy.get('html').should('have.class', "dark")
   });

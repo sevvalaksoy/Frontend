@@ -22,10 +22,9 @@ export default function Mode () {
     return (
         <div className="flex justify-end ">
             <div className="flex sm:gap-5 xs:gap-2 items-center">
-                <div className="flex items-center">
-                    <label className="relative inline-flex items-center cursor-pointer sm:gap-2 xs:gap-1">
+                <div  className="flex items-center">
+                    <label data-cy="dark-button" className="relative inline-flex items-center cursor-pointer sm:gap-2 xs:gap-1">
                         <input
-                            data-cy="dark-button"
                             type="checkbox"
                             className="sr-only peer"
                             data-testid="darkMode-toggle"
