@@ -1,6 +1,9 @@
+import { useSelector } from "react-redux";
 
 
 export default function Project (props) {
+    const lan = useSelector(myStore=>myStore.lan);
+    
     const {link1, link2, name, description, img} = props;
 
     return (
@@ -15,7 +18,7 @@ export default function Project (props) {
             </div>
             <div className="flex justify-between w-full">
                 <a className="font-Inter font-medium cursor-pointer underline md:text-base xs:text-xs dark:text-btn-t text-purple2" href={link1}>Github</a>
-                <a className="font-Inter font-medium cursor-pointer underline md:text-base xs:text-xs dark:text-btn-t text-purple2" href={link2}>View Site</a>
+                <a className="font-Inter font-medium cursor-pointer underline md:text-base xs:text-xs dark:text-btn-t text-purple2" href={link2}>{lan==="eng"?"View Site":"Siteyi Görüntüle"}</a>
             </div>
         </div>
     )
