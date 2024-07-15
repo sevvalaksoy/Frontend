@@ -33,3 +33,17 @@ describe('Input check', () => {
     cy.contains("Name must have at least 3 character").should("be.visible");
   });
 });
+
+describe('Projects check', () => {
+
+  it('Check if the projects display on the page', () => {
+    //arrange
+    cy.get('[data-cy="projects-button"]').as("ProjectsLink");
+    cy.get("@ProjectsLink").click();
+    //act
+    cy.get('[data-cy="box-projects"]').as("Projects");
+    //assert
+    cy.get("Projects").should("be.greaterThan", 14);
+  });
+});
+

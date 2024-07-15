@@ -14,7 +14,7 @@ export default function Header () {
             </div>
             <div className="flex justify-between md:gap-5 xs:gap-2 ">
                 <button onClick={()=>history.push("/skills")} className="md:text-lg font-Inter font-medium text-gray2 cursor-pointer md:py-3 md:px-8 sm:py-1 sm:px-5 xs:text-base">{info.header.bir}</button>
-                <button onClick={()=>history.push("/projects")} className="md:text-lg font-Inter font-medium text-gray2 cursor-pointer md:py-3 md:px-8 sm:py-1 sm:px-5 xs:text-base">{info.header.iki}</button>
+                <button onClick={()=>history.push("/projects")} data-cy="projects-button" className="md:text-lg font-Inter font-medium text-gray2 cursor-pointer md:py-3 md:px-8 sm:py-1 sm:px-5 xs:text-base">{info.header.iki}</button>
                 <button onClick={()=>history.push("/")} className="border-solid border-[1px] border-borderC rounded-md md:text-lg font-Inter font-medium text-purple2 cursor-pointer md:py-3 md:px-8 xs:py-1 sm:px-5 xs:px-2 xs:text-base bg-white">{info.header.üç}</button>
             </div>
         </div>

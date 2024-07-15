@@ -9,7 +9,7 @@ export default function FullProjects () {
         <div className="flex flex-col items-start w-full gap-10 py-12">
             <h2 className="font-Inter font-semibold md:text-5xl sm:text-2xl xs:text-xl dark:text-h1 text-black">{info.projects.head}</h2>
             <hr className="border-solid border-[1px] border-lilac w-full text-lilac"/>
-            <div className="w-full flex flex-wrap sm:flex-row xs:flex-col justify-between sm:gap-4 xs:gap-10">
+            <div data-cy="box-projects" className="w-full flex flex-wrap sm:flex-row xs:flex-col justify-between sm:gap-4 xs:gap-10">
                 <div className="flex flex-col items-start sm:w-[30%] gap-4 pb-20">
                     <img src={"/office.png"} className="md:w-full md:h-80 sm:h-40"/>
                     <h3 className="font-Inter md:text-3xl font-medium text-left sm:text-lg xs:text-base dark:text-pr text-purple">{lan==="eng"?"Office":"Ofis"}</h3>
