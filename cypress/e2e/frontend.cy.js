@@ -8,7 +8,7 @@ describe('SANITY CHECK', () => {
     cy.url().should("contain", 'https://frontend-eight-mu-33.vercel.app/');
   });
 });
-
+ 
 describe('SUCCESS', () => {
 
   it('opens the order page', () => { 
@@ -18,5 +18,18 @@ describe('SUCCESS', () => {
     cy.get("@ContactLink").click();
     //assert
     cy.url().should("contain", "/contact");
+  });
+});
+
+describe('Input check', () => {
+
+  it('write something on input', () => {
+    //arrange
+    cy.get('[data-cy="contact-button"]').as("ContactLink");
+    cy.get("@ContactLink").click();
+    //act
+    cy.get('[data-cy="name-input"]').type("Şe");
+    //assert
+    cy.contains("Name must have at least 3 character").should("be.visible");
   });
 });

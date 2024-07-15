@@ -59,6 +59,7 @@ export default function ContactForm () {
                 </label>
                 <input className="border-solid border-[1px] rounded-md lg:text-lg md:text-sm font-Inter font-medium xs:py-1 xs:px-4 xs:text-xs dark:text-white dark:border-btn-ş dark:bg-btn-bcg text-black border-borderC "
                     id="name"
+                    data-cy="name-input"
                     {...register('name', {
                     required: lan==="eng"?"Name is required":'İsminizi Girmelisiniz',
                     minLength: {
