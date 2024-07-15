@@ -44,7 +44,7 @@ export default function Mode () {
                     |
                 </div>
                 <div> 
-                    <div onClick={changeLang} className="font-Inter sm:text-base xs:text-xs font-bold dark:text-t-lilac  text-purple">
+                    <div onClick={changeLang} data-cy="lan-button" className="font-Inter sm:text-base xs:text-xs font-bold dark:text-t-lilac  text-purple">
                         {lang ==="eng" ?(<span className="cursor-pointer">TÜRKÇE</span>):
                         (<span className="text-gray">SWITCH TO </span>)}
                         {lang==="eng"?<span className="text-gray">'YE GEÇ</span>:<span className="cursor-pointer">ENGLISH</span>}

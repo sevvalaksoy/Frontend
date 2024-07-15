@@ -32,18 +32,40 @@ describe('Input check', () => {
     //assert
     cy.contains("Name must have at least 3 character").should("be.visible");
   });
-});
+}); 
 
-describe('Projects check', () => {
+describe('Input check', () => {
 
-  it('Check if the projects display on the page', () => {
+  it('Check if Projects page have input', () => {
     //arrange
-    cy.get('[data-cy="projects-button"]').as("ProjectsLink");
-    cy.get("@ProjectsLink").click();
+    cy.get('[data-cy="projects-button"]').as("Projects");
     //act
-    cy.get('[data-cy="box-projects"]').as("Projects");
+    cy.get("@Projects").click();
     //assert
-    cy.get("Projects").should("be.greaterThan", 14);
+    cy.contains("Grid Game").should("be.visible");
   });
-});
+});  
 
+describe('Input check', () => {
+
+  it('Check if skills page have input', () => {
+    //arrange 
+    cy.get('[data-cy="skills-button"]').as("Skills");
+    //act
+    cy.get("@Skills").click();
+    //assert
+    cy.contains("Java Script").should("be.visible");
+  });
+}); 
+
+describe('Language Check', () => {
+
+  it('write something on input', () => {
+    //arrange
+    cy.get('[data-cy="lan-button"]').as("Language");
+    //act
+    cy.get("@Language").click();
+    //assert
+    cy.contains("Yaratıcı düşünen, Minimalizm aşığı").should("be.visible");
+  });
+}); 
