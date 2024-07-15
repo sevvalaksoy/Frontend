@@ -5,7 +5,7 @@ export default function FullProjects () {
 
     const {isPending, error, data} = useProjects();
 
-    if (isPending) return <h3 className="font-Inter md:text-2xl font-medium text-center sm:text-lg xs:text-base dark:text-pr text-purple">Please Wait While the Projects are Loading...</h3>;
+    if (isPending) return <h3 className="font-Inter md:text-2xl min-h-screen font-medium text-center sm:text-lg xs:text-base dark:text-pr text-purple">Please Wait While the Projects are Loading...</h3>;
 
     if (error) return 'Hata: ' + error.message; 
 
