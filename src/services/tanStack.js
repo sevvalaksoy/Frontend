@@ -31,18 +31,18 @@ export const useProject = (id) => {
   });
 };
 
-// TO DELETE A USER
-const deleteUser = (id) => {
+// TO DELETE A PROJECT
+const deleteProject = (id) => {
   return axios.delete(
     `https://66939610c6be000fa07c73fb.mockapi.io/api/f/projects${id}`
   );
 };
 
-export const useDeleteContact = () => {
+export const useDeleteProject = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: deleteUser,
+    mutationFn: deleteProject,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['projects'] });
     },

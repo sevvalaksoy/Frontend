@@ -32,7 +32,7 @@ export default function Mode () {
                             onChange={changeMode}
                         />
                         <div className="sm:w-12 sm:h-5 xs:w-6 xs:h-3 bg-black1 rounded-full peer peer-focus:ring-1 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800
-                         sm:peer-checked:after:translate-x-7 xs:peer-checked:after:translate-x-3  rtl:peer-checked:after:-translate-x-full peer-checked:after:border-pink after:content-[''] 
+                         sm:peer-checked:after:translate-x-7 xs:peer-checked:after:translate-x-3 rtl:peer-checked:after:-translate-x-full peer-checked:after:border-pink after:content-[''] 
                         after:absolute sm:after:top-1 xs:after:top-[2px] sm:after:start-[1px] xs:after:start-0 after:bg-yellow after:border-black after:border after:rounded-full sm:after:h-4 sm:after:w-4 xs:after:h-3 xs:after:w-3 after:transition-all
                         dark:border-gray-600 peer-checked:bg-btn-purple"></div>
                         <span className="font-Inter sm:text-base xs:text-xs font-bold dark:text-t-white text-gray"> 

@@ -9,6 +9,7 @@ import { useAddContact } from "../services/tanStack";
 export default function ContactForm () {
     let history = useHistory();
     let dispatch = useDispatch();
+    const lan = useSelector(myStore=>myStore.lan);
     const person = useSelector(myStore=>myStore.contact);
 
     const mutation = useAddContact();
@@ -54,15 +55,15 @@ export default function ContactForm () {
             <form onSubmit={handleSubmit(myHandleSubmit)} className="flex flex-col w-1/2 xs:w-3/4">
             <div className="flex flex-col text-left dark:bg-d-body bg-white gap-4">
                 <label htmlFor="name" className="font-Inter md:text-2xl font-medium text-left sm:text-lg xs:text-base dark:text-t-lilac text-purple ">
-                    İsim:
+                    {lan==="eng"?"Name:":"İsim:"}
                 </label>
                 <input className="border-solid border-[1px] rounded-md lg:text-lg md:text-sm font-Inter font-medium xs:py-1 xs:px-4 xs:text-xs dark:text-white dark:border-btn-ş dark:bg-btn-bcg text-black border-borderC "
                     id="name"
                     {...register('name', {
-                    required: 'İsminizi Girmelisiniz',
+                    required: lan==="eng"?"Name is required":'İsminizi Girmelisiniz',
                     minLength: {
                     value: 3,
-                    message: 'İsminiz en az 3 karakter olmalı',
+                    message: lan==="eng"?"Name must have at least 3 character ":'İsminiz en az 3 karakter olmalı',
                     },
                     })}
                 />
@@ -70,15 +71,15 @@ export default function ContactForm () {
             </div>
             <div className="flex flex-col text-left dark:bg-d-body bg-white gap-4">
                 <label htmlFor="company" className="font-Inter md:text-2xl font-medium text-left sm:text-lg xs:text-base dark:text-t-lilac text-purple ">
-                    Şirket:
+                {lan==="eng"?"Company:":"Şirket:"}
                 </label>
                 <input className="border-solid border-[1px] rounded-md lg:text-lg md:text-sm font-Inter font-medium xs:py-1 xs:px-4 xs:text-xs  dark:text-white dark:border-btn-ş dark:bg-btn-bcg text-black border-borderC "
                     id="company"
                     {...register('company', {
-                    required: 'Şirket İsmi Girmelisiniz',
+                    required: lan==="eng"?"Company name is required":'Şirket İsmi Girmelisiniz',
                     minLength: {
                     value: 2,
-                    message: 'Şirket İsmi en az 2 karakter olmalı',
+                    message: lan==="eng"?"Company name must have at least 2 character ":'Şirket İsmi en az 2 karakter olmalı',
                     },
                     })}
                 />
@@ -86,15 +87,15 @@ export default function ContactForm () {
             </div>
             <div className="flex flex-col text-left dark:bg-d-body bg-white gap-4">
                 <label htmlFor="phone" className="font-Inter md:text-2xl font-medium text-left sm:text-lg xs:text-base dark:text-t-lilac text-purple ">
-                    Telefon:
+                {lan==="eng"?"Phone:":"Telefone:"}
                 </label>
                 <input className="border-solid border-[1px] rounded-md lg:text-lg md:text-sm font-Inter font-medium xs:py-1 xs:px-4 xs:text-xs  dark:text-white dark:border-btn-ş dark:bg-btn-bcg text-purple2 border-borderC "
                     id="phone"
                     {...register('phone', { 
-                    required: 'Telefon Numarası Girmelisiniz',
+                    required: lan==="eng"?"Phone number is required":'Telefon Numarası Girmelisiniz',
                     minLength: {
                     value: 11,
-                    message: 'Telefon numarası en 11 karakter olmalı.',
+                    message: lan==="eng"?"Phone must have 11 numbers":'Telefon numarası 11 karakter olmalı.',
                     },
                     })}
                 />
@@ -102,15 +103,15 @@ export default function ContactForm () {
             </div>
             <div className="flex flex-col text-left dark:bg-d-body bg-white gap-4">
                 <label htmlFor="location" className="font-Inter md:text-2xl font-medium text-left sm:text-lg xs:text-base dark:text-t-lilac text-purple ">
-                    Konum:
+                {lan==="eng"?"Location:":"Konum:"}
                 </label>
                 <input className="border-solid border-[1px] rounded-md lg:text-lg md:text-sm font-Inter font-medium xs:py-1 xs:px-4 xs:text-xs  dark:text-white dark:border-btn-ş dark:bg-btn-bcg text-purple2 border-borderC "
                     id="location"
                     {...register('location', {
-                    required: 'Lokasyon Girmelisiniz',
+                    required: lan==="eng"?"Location is required":'Lokasyon Girmelisiniz',
                     minLength: {
-                    value: 1,
-                    message: 'Şehir ve ilçe olarak giriniz',
+                    value: 2,
+                    message: lan==="eng"?"Type as City and District":'Şehir ve ilçe olarak giriniz',
                     },
                     })}
                 />
@@ -123,10 +124,10 @@ export default function ContactForm () {
                 <input className="border-solid border-[1px] rounded-md lg:text-lg md:text-sm font-Inter font-medium xs:py-1 xs:px-4 xs:text-xs  dark:text-white dark:border-btn-ş dark:bg-btn-bcg text-purple2 border-borderC "
                     id="email"
                     {...register('email', {
-                    required: 'Email Girmelisiniz',
+                    required: lan==="eng"?"Email is required":'Email Girmelisiniz',
                     pattern: {
                     value: /^[\w\-\.]+@([\w-]+\.)+[\w-]{2,}$/gm, 
-                    message: 'Lütfen geçerli bir eposta giriniz.',
+                    message: lan==="eng"?"Please enter a valid mail":'Lütfen geçerli bir eposta giriniz.',
                     },
                     })}
                 />
