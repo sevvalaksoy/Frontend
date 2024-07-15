@@ -94,8 +94,7 @@ export const data = {
             {
                 name:"Şükran Listesi",
                 img:"/gratitude.png",
-                description:"A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
-                link1: "https://github.com/sevvalaksoy/s10g5",
+                description:"Gün içerisinde minnet duyduğumuz şeyleri yazmak için düzenlenmiş özel uygulama. Dilediğiniz gibi not ekleyebilir ve minnet duygunuzu taze, kendinizi huzurlu tutabilirsiniz.",
                 link2: "https://s10g5.vercel.app/",
                 id: 1
             },
@@ -118,7 +117,7 @@ export const data = {
             {
                 name:"Film Listesi",
                 img:"/proje1.png",
-                description:"A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+                description:"İçerisinde gelmiş geçmiş en iyi filmlerden olan tam 20 filmin listelendiği kullanışlı film izleme listesi. Dilediğiniz zaman filmi favorilerinize ekleyebilir, izlediklerinizi ise çıkarabilirisiniz.",
                 link1: "https://github.com/sevvalaksoy/fsweb-s10g3-redux-watchlist-solution",
                 link2: "https://fsweb-s10g3-redux-watchlist-solution-sand.vercel.app/",
                 id: 4
@@ -126,7 +125,7 @@ export const data = {
             {
                 name:"Kripto Sayacı",
                 img:"/cripto.png",
-                description:"A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+                description:"21.yüzyılın en önemli birimlerinin takip edildiği, saniyelik güncellendiği bir kripto sayacı. Finansal işlemlerinizi yapmak için izlemeniz gereken tek uygulama.",
                 link1: "https://github.com/sevvalaksoy/sp9g3s2",
                 link2: "https://sp9g3s2.vercel.app/",
                 id: 5,
@@ -134,7 +133,7 @@ export const data = {
             {
                 name:"Yapılacaklar Listesi",
                 img:"/todo.png",
-                description:"A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+                description:"Kağıt kalem bulamayanlar için düzenlenmiş yapılacaklar listesi! İstediğiniz gibi görev ekleyebilir, onlara bir teslim süresi atayabilir, eklediğiniz isimlere göre görev paylaşımı yaptırabilirsiniz. Takım içi ya da bireysel görevlerde en kullanışlı uygulamalardan.",
                 link1: "https://github.com/sevvalaksoy/s9g2",
                 link2: "https://s9g2.vercel.app/",
                 id: 6,
@@ -142,7 +141,7 @@ export const data = {
             {
                 name:"İletişim Formu",
                 img:"/contact.png",
-                description:"A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+                description:"Form elemanlarının detaylı kullanıldığı bir iletişim formu. Girilen datanın istenen içeriğe uygunluğu test eden ve o şekilde gönderilmesine izin veren websitesi.",
                 link1: "https://github.com/sevvalaksoy/s9g4",
                 link2: "https://s9g4.vercel.app/",
                 id: 7
@@ -150,7 +149,7 @@ export const data = {
             {
                 name:"Hesap Makinesi",
                 img:"/calculator.png",
-                description:"A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+                description:"Basit bir hesap makinesi prototipi. Normal bir hesap makinesinin yapabileceği her şeyi yapan online olarak kullanıma hazır makine.",
                 link1: "https://github.com/sevvalaksoy/s10g1",
                 link2: "https://s10g1.vercel.app/",
                 id: 8
@@ -158,7 +157,7 @@ export const data = {
             {
                 name:"Ürün Listesi",
                 img:"/products.png",
-                description:"A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+                description:"Belirli bir datadan gelen ürünlerin listelendiği ve dilendiği gibi sepete eklenip çıkarılabildiği basit bir alışveriş sayfası prototipi. Ürünler istenildiği kadar sepete eklenip, çıkarılıp ana sayfada gezinilebilir.",
                 link1: "https://github.com/sevvalaksoy/s11g2",
                 link2: "https://s11g2.vercel.app/",
                 id: 9
@@ -166,7 +165,7 @@ export const data = {
             {
                 name:"Arkadaşlar",
                 img:"/friends.png",
-                description:"A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+                description:"Kullanıcı adı ve şifre ile giriş yapılabilecek bir arkadaşlık sayfası. Giriş yapıldıktan sonra şifrenin locale kaydedilği ve daha sonrasında da kullanılmak üzere şifrelendiği arkadaş bilgilerini saklayan bir websitesi. Giriş yapıldıktan sonra şifre çözümü doğru ise içeride gezinebileceğiniz güvenli bir rehber.",
                 link1: "https://github.com/sevvalaksoy/s11g1",
                 link2: "https://s11g1.vercel.app/login",
                 id: 10
@@ -174,7 +173,7 @@ export const data = {
             {
                 name:"WiKişiler",
                 img:"/wicontacts.png",
-                description:"A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+                description:"Basit bir form alanı olan, belirli bir gruba özel hazırlanmış kişiler rehberi. Kullanıcı bilgileri girildikten sonra belirli biir API'ya post olarak gönderilen ve daha sonrasında içerisinde listelenen websitesi.",
                 link1: "https://github.com/sevvalaksoy/s10g4",
                 link2: "https://s10g4.vercel.app/",
                 id: 11
@@ -182,7 +181,7 @@ export const data = {
             {
                 name:"WiDükkan",
                 img:"/WiStore.png", 
-                description:"A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+                description:"Giriş gerektiren bir alışveriş sitesi. Başarılı giriş sağlandıktan sonra içersinde dilediğiniz gibi gezinip alışveriş yapabileceğiniz websitesi.",
                 link1: "https://github.com/sevvalaksoy/s9g3",
                 link2: "https://s9g3.vercel.app/",
                 id: 12
@@ -190,7 +189,7 @@ export const data = {
             {
                 name:"CRUDs",
                 img:"/CRUD.png",
-                description:"A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+                description:"Belirli bir API'den filmlerin datasını çeken ve anasayfasında listeleyen bir websitesi. İçerisinde dilediğiniz filmi favorilerinize ekleyebilir, bunları da anasayfada görünür kılabilirsiniz. Ayrıca istediğiniz başka filmleri de film listesine manuel olarak ekleyebilir ya da dilediğinizi silebilirsiniz.",
                 link1: "https://github.com/sevvalaksoy/s11g3",
                 link2: "https://s11g3.vercel.app/movies",
                 id: 13
