@@ -1,10 +1,30 @@
+
+import { useProjects } from "../services/tanStack";
 import Project from "./Project";
 import { useSelector } from "react-redux";
 
 export default function FullProjects () { 
-    const lan = useSelector(myStore=>myStore.lan);
-    const info = useSelector(myStore=>myStore.info)
 
+    const info = useSelector(myStore=>myStore.info);
+    const lan = useSelector(myStore=>myStore.lan);
+ 
+    const {isPending, error, data} = useProjects(lan);
+    
+    console.log(lan, data)
+
+
+    if(isPending)return (
+        <h3 className="font-Inter md:text-5xl min-h-screen font-medium text-center pt-60 sm:text-lg xs:text-base text-purple">
+          Please Wait While the Projects are Loading...
+        </h3>
+      );
+    if(error) return (
+        <h3 className="font-Inter md:text-5xl min-h-screen font-medium text-center pt-60 sm:text-lg xs:text-base text-purple">
+          There was an error please try again.
+        </h3>
+      );
+
+    
     return (
         <div className="flex flex-col items-start w-full gap-10 py-12">
             <h2 className="font-Inter font-semibold md:text-5xl sm:text-2xl xs:text-xl dark:text-h1 text-black">{info.projects.head}</h2>
@@ -21,8 +41,8 @@ export default function FullProjects () {
                         <a className="font-Inter font-medium cursor-pointer underline md:text-base xs:text-xs dark:text-btn-t text-purple2" href="https://www.amazon.com.tr/b?node=60457475031">{lan==="eng"?"View Site":"Siteyi Görüntüle"}</a>
                     </div>
                 </div>
-                {info.Pprojects.map((proje, key)=> {
-                    return <Project key={key} link1={proje.link1} name={proje.name} link2={proje.link2} img={proje.img} description={proje.description}/>
+                {data.data.map((proje, index)=> {
+                    return <Project key={index} link1={proje.link1} name={proje.name} link2={proje.link2} img={proje.img} description={proje.description}/>
                 })}
             </div>
         </div>

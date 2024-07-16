@@ -2,14 +2,14 @@ import axios from 'axios';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
 //TO GET ALL PROJECTS
-const getProjects = () => {
-  return axios.get("https://66939610c6be000fa07c73fb.mockapi.io/api/f/projects");
+const getProjects = (id) => {
+  return axios.get(`https://669631420312447373c177f2.mockapi.io/api/p/${id}`);
 };
 
-export const useProjects = () => {
+export const useProjects = (id) => {
   return useQuery({
-    queryKey: ['projects'],
-    queryFn: getProjects,
+    queryKey: ['datas', id],
+    queryFn: () => getProjects(id),
   });
 };
 
