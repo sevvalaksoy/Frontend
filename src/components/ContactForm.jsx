@@ -33,7 +33,7 @@ export default function ContactForm () {
             if(!isValid)return;
             console.log(formData);
             if(person.name===formData.name) {
-                toast.error("Daha önce kayıt yapılmış!", {
+                toast.error(`${formData.name} adı ile daha önce kayıt yapılmış!`, {
                     position: "top-center"
                 })
             } else {
