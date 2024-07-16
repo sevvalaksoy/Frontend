@@ -10,6 +10,7 @@ export const useProjects = (id) => {
   return useQuery({
     queryKey: ['datas', id],
     queryFn: () => getProjects(id),
+    staleTime: 5000,
   });
 };
 
