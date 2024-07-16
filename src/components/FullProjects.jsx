@@ -32,8 +32,8 @@ export default function FullProjects () {
             <div className="w-full flex flex-wrap sm:flex-row xs:flex-col justify-between sm:gap-4 xs:gap-10">
                 <div className="flex flex-col items-start sm:w-[30%] gap-4 pb-20">
                     <img src={"/office.png"} className="md:w-full md:h-80 sm:h-40"/>
-                    <h3 className="font-Inter md:text-3xl font-medium text-left sm:text-lg xs:text-base dark:text-pr text-purple">{lan==="eng"?"Office":"Ofis"}</h3>
-                    <p className="font-Inter font-normal md:text-sm text-left xs:text-xs dark:text-white text-gray2">{lan==="eng"?"A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.":"Ofis ürünlerine özel geliştirilmiş, kullanıcının ihtiyaçlarını kolaylaıkla bulabilmesi için düzenlenmiş özel bir amazon sayfası. Toplu alımlar için datada bulunan malzemelerin SQl kullanılarak çekildiği ve gösterildiği ve kullanışlı hale getirildiği yer. "}</p>
+                    <h3 className="altbaşlık">{lan==="eng"?"Office":"Ofis"}</h3>
+                    <p className="prdes">{lan==="eng"?"A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.":"Ofis ürünlerine özel geliştirilmiş, kullanıcının ihtiyaçlarını kolaylaıkla bulabilmesi için düzenlenmiş özel bir amazon sayfası. Toplu alımlar için datada bulunan malzemelerin SQl kullanılarak çekildiği ve gösterildiği ve kullanışlı hale getirildiği yer. "}</p>
                     <div className="flex lg:gap-4 md:gap-2 xs:gap-1">
                         <button className="prbutton">SQL</button>
                     </div>

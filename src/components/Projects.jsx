@@ -13,7 +13,7 @@ export default function Projects () {
                 <div className="flex flex-col items-start sm:w-[30%] gap-4">
                     <img src={"/proje2.png"} className="md:w-full md:h-80 sm:h-40 "/>
                     <h3 className="altbaşlık">{info.projects.p1}</h3> 
-                    <p className="font-Inter font-normal md:text-sm text-left xs:text-xs dark:text-white text-gray2">{info.projects.c1}</p>
+                    <p className="prdes">{info.projects.c1}</p>
                     <div className="flex lg:gap-4 md:gap-2 xs:gap-1">
                         <button className="prbutton">react</button>
                         <button className="prbutton">redux</button>
@@ -27,7 +27,7 @@ export default function Projects () {
                 <div className="flex flex-col items-start sm:w-[30%] gap-4 ">
                     <img src={"/pizza.png"} className="md:w-full md:h-80 sm:h-40" />
                     <h3 className="altbaşlık">{info.projects.p2}</h3> 
-                    <p className="font-Inter font-normal md:text-sm text-left xs:text-xs dark:text-white text-gray2">{info.projects.c2}</p>
+                    <p className="prdes">{info.projects.c2}</p>
                     <div className="flex lg:gap-4 md:gap-2 xs:gap-1">
                         <button className="prbutton">react</button>
                         <button className="prbutton">redux</button>
@@ -41,7 +41,7 @@ export default function Projects () {
                 <div className="flex flex-col items-start sm:w-[30%] gap-4">
                     <img src={"/proje3.png"} className="md:w-full md:h-80 sm:h-40"/>
                     <h3 className="altbaşlık">{info.projects.p3}</h3>
-                    <p className="font-Inter font-normal md:text-sm text-left xs:text-xs dark:text-white text-gray2">{info.projects.c3}</p>
+                    <p className="prdes">{info.projects.c3}</p>
                     <div className="flex lg:gap-4 md:gap-2 xs:gap-1">
                         <button className="prbutton">react</button>
                         <button className="prbutton">redux</button>

@@ -45,3 +45,7 @@ body {
 .altbaşlık {
   @apply font-Inter md:text-3xl font-medium text-left sm:text-lg xs:text-base dark:text-t-lilac text-purple 
 }
+
+.prdes {
+  @apply font-Inter font-normal md:text-sm text-left xs:text-xs dark:text-white text-gray2
+}
