@@ -31,12 +31,10 @@ function App() {
       document.querySelector('html').classList.remove('dark');
     }
     const fetchLangData = async () => {
-      if (lan) {
         const creds = lan === "eng" ? data.eng : data.tr;
         setLoading(true);
         await dispatch(fetchData(creds));
         setLoading(false);
-      }
     }
     fetchLangData();
   },[lan, dispatch])
@@ -48,7 +46,6 @@ function App() {
       </h3>
     );
   }
-  console.log(bilgi)
   
   return (
     
