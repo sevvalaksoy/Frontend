@@ -14,6 +14,27 @@ export const useProjects = (id) => {
   });
 };
 
+// TO ADD A NEW USER
+const addUser = (proje) => {
+  return axios.post("https://66942c42c6be000fa07e4e77.mockapi.io/f2/contact", proje);
+};
+
+export const useAddContact = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: addUser,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['contact'] });
+    },
+  });
+};
+
+
+
+
+
+
 // TO GET A SPECIFIC PROJECT
 const getProject = async (id) => {
   let data;
@@ -46,22 +67,6 @@ export const useDeleteProject = () => {
     mutationFn: deleteProject,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['projects'] });
-    },
-  });
-};
-
-// TO ADD A NEW USER
-const addUser = (proje) => {
-  return axios.post("https://66942c42c6be000fa07e4e77.mockapi.io/f2/contact", proje);
-};
-
-export const useAddContact = () => {
-  const queryClient = useQueryClient();
-
-  return useMutation({
-    mutationFn: addUser,
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['contact'] });
     },
   });
 };

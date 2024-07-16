@@ -1,4 +1,5 @@
-import axios from "axios";
+
+import { API } from "../../api/api";
 
 export const CHANGE_MODE = 'CHANGE_MODE';
 export const CHANGE_LAN = 'CHANGE_LAN';
@@ -23,8 +24,8 @@ export const changeData = (data) => {
 }
 
 export const fetchData = (creds) => async (dispacth) => {
-    return axios
-        .post("https://66939610c6be000fa07c73fb.mockapi.io/api/f/data", creds )
+    return API
+        .post("data", creds )
         .then((res)=>dispacth(changeData(res.data)))
         .catch((err)=>console.warn(err))
 }
