@@ -7,11 +7,11 @@ export default function Profile () {
 
     return (
         <div className="flex flex-col items-start w-full gap-10">
-            <hr className="border-solid border-[1px] border-lilac w-full text-lilac"/>
-            <h2 className="font-Inter font-semibold md:text-5xl sm:text-2xl xs:text-xl dark:text-h1 text-black">{info.profile.head}</h2> 
+            <hr className="hrline"/>
+            <h2 className="başlık">{info.profile.head}</h2> 
             <div className="w-full flex xs:gap-2 sm:flex-row xs:flex-col">
                 <div className="sm:w-1/2 flex flex-col gap-6 xs:pb-4">
-                    <h3 className="font-Inter md:text-3xl font-medium text-left sm:text-lg xs:text-base dark:text-t-lilac text-purple">{info.profile.h21}</h3>
+                    <h3 className="altbaşlık">{info.profile.h21}</h3>
                     <div className="flex xs:gap-4 lg:gap-10">
                         <div className="flex flex-col gap-6">
                             <h4 className="font-Inter font-semibold lg:text-lg md:text-sm sm:text-xs text-left text-nowrap dark:text-white text-black">{info.profile.b1}</h4>
@@ -28,7 +28,7 @@ export default function Profile () {
                     </div>
                 </div>
                 <div className="sm:w-1/2 flex flex-col gap-6">
-                    <h3 className="font-Inter md:text-3xl font-medium text-left sm:text-lg xs:text-base dark:text-t-lilac text-purple">{info.profile.h22}</h3>
+                    <h3 className="altbaşlık">{info.profile.h22}</h3>
                     <p className="font-Inter font-normal lg:text-lg md:text-base text-left sm:text-xs dark:text-white text-gray2">{info.profile.des1}</p>
                     <p className="font-Inter font-normal lg:text-lg md:text-base text-left sm:text-xs dark:text-white text-gray2">{info.profile.des2}</p>
                 </div>

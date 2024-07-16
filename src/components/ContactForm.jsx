@@ -53,11 +53,11 @@ export default function ContactForm () {
                 <img className="object-cover rounded-2xl" src={"/pp.jpg"}/>
             </div>
             <form onSubmit={handleSubmit(myHandleSubmit)} className="flex flex-col w-1/2 xs:w-3/4">
-            <div className="flex flex-col text-left dark:bg-d-body bg-white gap-4">
-                <label htmlFor="name" className="font-Inter md:text-2xl font-medium text-left sm:text-lg xs:text-base dark:text-t-lilac text-purple ">
+            <div className="formdiv">
+                <label htmlFor="name" className="formlabel ">
                     {lan==="eng"?"Name:":"İsim:"}
                 </label>
-                <input className="border-solid border-[1px] rounded-md lg:text-lg md:text-sm font-Inter font-medium xs:py-1 xs:px-4 xs:text-xs dark:text-white dark:border-btn-ş dark:bg-btn-bcg text-black border-borderC "
+                <input className="formalanı"
                     id="name"
                     data-cy="name-input"
                     {...register('name', {
@@ -70,11 +70,11 @@ export default function ContactForm () {
                 />
                 <p className="text-red">{errors.name?.message}</p>
             </div>
-            <div className="flex flex-col text-left dark:bg-d-body bg-white gap-4">
-                <label htmlFor="company" className="font-Inter md:text-2xl font-medium text-left sm:text-lg xs:text-base dark:text-t-lilac text-purple ">
+            <div className="formdiv">
+                <label htmlFor="company" className="formlabel ">
                 {lan==="eng"?"Company:":"Şirket:"}
                 </label>
-                <input className="border-solid border-[1px] rounded-md lg:text-lg md:text-sm font-Inter font-medium xs:py-1 xs:px-4 xs:text-xs  dark:text-white dark:border-btn-ş dark:bg-btn-bcg text-black border-borderC "
+                <input className="formalanı"
                     id="company"
                     {...register('company', {
                     required: lan==="eng"?"Company name is required":'Şirket İsmi Girmelisiniz',
@@ -86,11 +86,11 @@ export default function ContactForm () {
                 />
                 <p className="text-red">{errors.company?.message}</p>
             </div>
-            <div className="flex flex-col text-left dark:bg-d-body bg-white gap-4">
-                <label htmlFor="phone" className="font-Inter md:text-2xl font-medium text-left sm:text-lg xs:text-base dark:text-t-lilac text-purple ">
+            <div className="formdiv">
+                <label htmlFor="phone" className="formlabel">
                 {lan==="eng"?"Phone:":"Telefone:"}
                 </label>
-                <input className="border-solid border-[1px] rounded-md lg:text-lg md:text-sm font-Inter font-medium xs:py-1 xs:px-4 xs:text-xs  dark:text-white dark:border-btn-ş dark:bg-btn-bcg text-purple2 border-borderC "
+                <input className="formalanı"
                     id="phone"
                     {...register('phone', { 
                     required: lan==="eng"?"Phone number is required":'Telefon Numarası Girmelisiniz',
@@ -102,11 +102,11 @@ export default function ContactForm () {
                 />
                 <p className="text-red">{errors.phone?.message}</p>
             </div>
-            <div className="flex flex-col text-left dark:bg-d-body bg-white gap-4">
-                <label htmlFor="location" className="font-Inter md:text-2xl font-medium text-left sm:text-lg xs:text-base dark:text-t-lilac text-purple ">
+            <div className="formdiv">
+                <label htmlFor="location" className="formlabel">
                 {lan==="eng"?"Location:":"Konum:"}
                 </label>
-                <input className="border-solid border-[1px] rounded-md lg:text-lg md:text-sm font-Inter font-medium xs:py-1 xs:px-4 xs:text-xs  dark:text-white dark:border-btn-ş dark:bg-btn-bcg text-purple2 border-borderC "
+                <input className="formalanı "
                     id="location"
                     {...register('location', {
                     required: lan==="eng"?"Location is required":'Lokasyon Girmelisiniz',
@@ -118,11 +118,11 @@ export default function ContactForm () {
                 />
                 <p className="text-red">{errors.location?.message}</p>
             </div>
-            <div className="flex flex-col text-left dark:bg-d-body bg-white gap-4">
-                <label htmlFor="email" className="font-Inter md:text-2xl font-medium text-left sm:text-lg xs:text-base dark:text-t-lilac text-purple ">
+            <div className="formdiv">
+                <label htmlFor="email" className="formlabel">
                     Email:
                 </label>
-                <input className="border-solid border-[1px] rounded-md lg:text-lg md:text-sm font-Inter font-medium xs:py-1 xs:px-4 xs:text-xs  dark:text-white dark:border-btn-ş dark:bg-btn-bcg text-purple2 border-borderC "
+                <input className="formalanı"
                     id="email"
                     {...register('email', {
                     required: lan==="eng"?"Email is required":'Email Girmelisiniz',
