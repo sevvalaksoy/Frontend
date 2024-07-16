@@ -11,9 +11,9 @@ export default function ContactForm () {
     let dispatch = useDispatch();
     const lan = useSelector(myStore=>myStore.lan);
     const person = useSelector(myStore=>myStore.contact);
-
+   
     const mutation = useAddContact();
-
+    
     const {
         register,
         handleSubmit,
@@ -33,19 +33,21 @@ export default function ContactForm () {
             if(!isValid)return;
             console.log(formData);
             if(person.name===formData.name) {
-                toast.error(`${formData.name} adı ile daha önce kayıt yapılmış!`, {
+                toast.error(lan==="eng"?`${formData.name} already has a registiration.`:`${formData.name} adı ile daha önce kayıt yapılmış!`, {
                     position: "top-center"
                 })
             } else {
                 reset();
-                dispatch(addContact(formData));
+                dispatch(addContact(formData)); 
                 mutation.mutate(formData);
-                toast.success("Beni Tercih ettiğin için Teşekkürler!", {
+                toast.success(lan==="eng"?"Thank you for reaching out to me!":"Beni Tercih ettiğin için Teşekkürler!", {
                     position: "top-center"
                 })
                 history.push("/");
             }
           }
+
+         
 
     return (
         <div className="flex justify-between lg:flex-row xs:flex-col lg:gap-20 items-center py-12 lg:px-20 md:px-10 sm:gap-12 sm:px-8 xs:gap-8 xs:px-4 xs:py-8 dark:bg-d-body bg-white">
